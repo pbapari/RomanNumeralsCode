@@ -81,11 +81,11 @@ class RomanNumeralGeneratorTest extends \PHPUnit_Framework_TestCase {
    *   Test cases.
    */
   public function providerTestLowerCaseGeneration() {
-    $output = [];
-    foreach ($this->providerTestGeneration() as $key => $test) {
-      $output[$key] = [$test[0], strtolower($test[1])];
+    $opt_array = [];
+    foreach ($this->providerTestGeneration() as $key => $value) {
+      $opt_array[$key] = [$value[0], strtolower($value[1])];
     }
-    return $output;
+    return $opt_array;
   }
 
 }
